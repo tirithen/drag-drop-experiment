@@ -1,0 +1,29 @@
+body, html {
+  margin: 0;
+  background: #555;
+}
+
+.card-slot {
+  background: #000;
+  width: 7em;
+  height: 11em;
+  float: left;
+  margin: 0.5em;
+}
+
+.card {
+  background: #fff;
+  border-radius: 0.5em;
+  width: 6em;
+  height: 10em;
+  position: relative;
+  z-index: 2;
+}
+
+.card-green {
+  background: green;
+}
+
+.card-red {
+  background: red;
+}
