@@ -17,8 +17,8 @@ class Draggable {
         mode: 'anchor',
         anchors: [],
         range: Infinity,
-        //elementOrigin: { x: 0.5, y: 0.3 },
-        elementOrigin: { x: 0, y: 0 },
+        elementOrigin: { x: 0.5, y: 0.3 },
+        //elementOrigin: { x: 0, y: 0 },
         endOnly: true
       },
       autoScroll: true,
@@ -59,9 +59,9 @@ class Dropzone {
         };
 
         // adds '.play' class to tile when tile is dropped on another element (board squares)
-        if (event.target.classList.contains('boardSquare')) {
-          event.relatedTarget.classList.add('dragging');
-        }
+        //if (event.target.classList.contains('boardSquare')) {
+        //event.relatedTarget.classList.add('dragging');
+        //}
 
         event.draggable.snap({
           anchors: [dropCenter]
@@ -72,7 +72,7 @@ class Dropzone {
       })
       .on('dragleave', (event) => {
         event.draggable.snap(false);
-        event.relatedTarget.classList.remove('dragging');
+        //event.relatedTarget.classList.remove('dragging');
       });
   }
 }
@@ -92,6 +92,4 @@ document.addEventListener('DOMContentLoaded', () => {
   [].forEach.call(document.querySelectorAll('.card-slot'), (cardSlot) => {
     cardSlots.push(new CardSlot(cardSlot));
   });
-
-  console.log('cards', cards);
 });
